@@ -1,28 +1,32 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from './components/Navbar';
-import Home from "./pages/Home";
-import Subjects from "./pages/Subjects";
-import Assignments from "./pages/Assignments";
-import Grades from "./pages/Grades";
-import Profile from "./pages/Profile";
-
+import { Routes, Route } from 'react-router-dom';
+import Login from './pages/Login';
+import StudentDashboardLayout from './pages/StudentDashboardLayout';
+import Home from './pages/student/Home';
+import Assignments from './pages/student/Assignments';
+import Grades from './pages/student/Grades';
+import Profile from './pages/student/Profile';
+import Subjects from './pages/student/Subjects';
+import TeacherDashboard from './pages/TeacherDashboard';
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-gray-50 font-sans">
-        <Navbar />
-        <div className="p-6 container mx-auto">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/subjects" element={<Subjects />} />
-            <Route path="/assignments" element={<Assignments />} />
-            <Route path="/grades" element={<Grades />} />
-            <Route path="/profile" element={<Profile />} />
-          </Routes>
-        </div>
-      </div>
-    </Router>
+    <Routes>
+      {/* Login Route */}
+      <Route path="/" element={<Login />} />
+
+      {/* Student Dashboard Routes */}
+      <Route path="/student" element={<StudentDashboardLayout />}>
+        <Route index element={<Home />} />
+        <Route path="home" element={<Home />} />
+        <Route path="assignments" element={<Assignments />} />
+        <Route path="grades" element={<Grades />} />
+        <Route path="profile" element={<Profile />} />
+        <Route path="subjects" element={<Subjects />} />
+      </Route>
+
+      {/* Teacher Dashboard Route */}
+      <Route path="/teacher" element={<TeacherDashboard />} />
+    </Routes>
   );
 }
 
