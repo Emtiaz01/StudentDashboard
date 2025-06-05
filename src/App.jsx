@@ -1,33 +1,50 @@
-import { Routes, Route } from 'react-router-dom';
-import Login from './pages/Login';
-import StudentDashboardLayout from './pages/StudentDashboardLayout';
-import Home from './pages/student/Home';
-import Assignments from './pages/student/Assignments';
-import Grades from './pages/student/Grades';
-import Profile from './pages/student/Profile';
-import Subjects from './pages/student/Subjects';
-import TeacherDashboard from './pages/TeacherDashboard';
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 
-function App() {
+import Login from "./pages/Login";
+
+// Student imports
+import StudentDashboardLayout from "./pages/StudentDashboardLayout";
+import Home from "./pages/student/Home";
+import Profile from "./pages/student/Profile";
+import Courses from "./pages/student/Courses";
+import Assignments from "./pages/student/Assignments";
+
+// Faculty imports
+import FacultyDashboardLayout from "./pages/faculty/FacultyDashboardLayout";
+import FacultyHome from "./pages/faculty/Home";
+import FacultyCourses from "./pages/faculty/Courses";
+import Students from "./pages/faculty/Students";
+import FacultyProfile from "./pages/faculty/Profile";
+
+const App = () => {
   return (
     <Routes>
-      {/* Login Route */}
+      {/* Login route */}
       <Route path="/" element={<Login />} />
 
-      {/* Student Dashboard Routes */}
-      <Route path="/student" element={<StudentDashboardLayout />}>
-        <Route index element={<Home />} />
+      {/* Student dashboard routes */}
+      <Route path="/student/dashboard" element={<StudentDashboardLayout />}>
+        <Route index element={<Navigate to="home" replace />} />
         <Route path="home" element={<Home />} />
-        <Route path="assignments" element={<Assignments />} />
-        <Route path="grades" element={<Grades />} />
         <Route path="profile" element={<Profile />} />
-        <Route path="subjects" element={<Subjects />} />
+        <Route path="courses" element={<Courses />} />
+        <Route path="assignments" element={<Assignments />} />
       </Route>
 
-      {/* Teacher Dashboard Route */}
-      <Route path="/teacher" element={<TeacherDashboard />} />
+      {/* Faculty dashboard routes */}
+      <Route path="/faculty/dashboard" element={<FacultyDashboardLayout />}>
+        <Route index element={<Navigate to="home" replace />} />
+        <Route path="home" element={<FacultyHome />} />
+        <Route path="courses" element={<FacultyCourses />} />
+        <Route path="students" element={<Students />} />
+        <Route path="profile" element={<FacultyProfile />} />
+      </Route>
+
+      {/* Fallback route */}
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
-}
+};
 
 export default App;
