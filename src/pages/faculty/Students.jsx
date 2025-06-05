@@ -3,9 +3,9 @@ import React, { useState } from "react";
 const Students = () => {
   // Sample data — replace or connect with real API later
   const [students] = useState([
-    { id: 1, name: "Alice Johnson", email: "alice@example.com", attendance: 92, avgGrade: 88, progress: 75 },
-    { id: 2, name: "Bob Smith", email: "bob@example.com", attendance: 85, avgGrade: 76, progress: 55 },
-    { id: 3, name: "Charlie Brown", email: "charlie@example.com", attendance: 98, avgGrade: 93, progress: 90 },
+    { id: 1, name: "Emtiaz Ahmed", email: "emtiazahmed20@gmail.com", attendance: 92, avgGrade: 88, progress: 75 },
+    { id: 2, name: "Israt Jahan", email: "israt@gmail.com", attendance: 85, avgGrade: 76, progress: 55 },
+    { id: 3, name: "Naimur Rashid", email: "21303169@iubat.edu", attendance: 98, avgGrade: 93, progress: 90 },
   ]);
 
   return (

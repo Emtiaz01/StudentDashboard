@@ -5,9 +5,9 @@ const FacultyHome = () => {
 
   // Sample students data
   const students = [
-    { id: 1, name: "Alice Johnson", attendance: 92, grade: "A" },
-    { id: 2, name: "Bob Smith", attendance: 85, grade: "B+" },
-    { id: 3, name: "Charlie Brown", attendance: 78, grade: "B" },
+    { id: 1, name: "Emtiaz Ahmed", attendance: 92, grade: "A" },
+    { id: 2, name: "Israt Jahanh", attendance: 85, grade: "B+" },
+    { id: 3, name: "Naimur Rashid", attendance: 78, grade: "B" },
   ];
 
   // State for grades (editable)

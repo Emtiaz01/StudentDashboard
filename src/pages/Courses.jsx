@@ -3,11 +3,11 @@ import React from "react";
 
 const Courses = () => {
   const courses = [
-    { id: 1, title: "Math 101", instructor: "Prof. Smith" },
-    { id: 2, title: "Physics 201", instructor: "Dr. Johnson" },
-    { id: 3, title: "English Literature", instructor: "Ms. Brown" },
-    { id: 4, title: "Computer Science", instructor: "Mr. Lee" },
-    { id: 5, title: "History", instructor: "Mrs. Davis" },
+    { id: 1, title: "Math 101", instructor: "Krishna Das" },
+    { id: 2, title: "Physics 201", instructor: "Abhijit Saha" },
+    { id: 3, title: "English Literature", instructor: "Suhala Lamia" },
+    { id: 4, title: "Computer Science", instructor: "Sheekar Banarjee" },
+    { id: 5, title: "History", instructor: "Shaheenur Alam" },
   ];
 
   return (

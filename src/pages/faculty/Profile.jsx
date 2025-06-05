@@ -3,10 +3,10 @@ import React, { useState, useRef } from "react";
 
 const FacultyProfile = () => {
   const [user, setUser] = useState({
-    name: "Professor Jane Doe",
-    email: "jane.doe@university.edu",
+    name: "Krishna Das",
+    email: "krishna@iubat.edu",
     department: "Computer Science",
-    phone: "+1 (555) 987-6543",
+    phone: "01234567890",
     photo: null,
   });
 
